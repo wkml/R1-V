@@ -188,6 +188,7 @@ def compute_metrics(testset_data, all_predicts):
     print(f"\nAccuracy: {accuracy:.2f}%")
 
     # Save results to a JSON file
+    os.mkdirs()
     with open(args.output_path, "w") as f:
         json.dump({
             'accuracy': accuracy,
